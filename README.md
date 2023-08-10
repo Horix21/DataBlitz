@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/MessiahGeekin/DataBlitz" alt="License">
+  <img src="https://img.shields.io/github/license/Horix21/DataBlitz" alt="License">
 </p>
 
 <h2>Prerequisites</h2>
@@ -20,7 +20,7 @@
   <li>Clone the repository:</li>
 </ol>
 
-<pre><code>git clone https://github.com/MessiahGeekin/DataBlitz.git
+<pre><code>git clone https://github.com/Horix21/DataBlitz
 </code></pre>
 
 <ol start="2">
